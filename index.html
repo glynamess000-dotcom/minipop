@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ролевой Бот</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем Telegram WebApp SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="glitch-bg"></div>
+    
+    <div class="container">
+        <!-- Верхние кнопки управления -->
+        <div class="top-actions">
+            <button class="pill-btn" onclick="sendAction('status')">статус контекста</button>
+            <button class="pill-btn" onclick="sendAction('clear')">очистить историю</button>
+        </div>
+
+        <!-- Кнопки подтверждения/отмены -->
+        <div class="icon-actions">
+            <button class="icon-btn cancel" onclick="sendAction('cancel')">✖</button>
+            <button class="icon-btn confirm" onclick="sendAction('confirm')">✔</button>
+        </div>
+
+        <!-- Персонажи (Круги) -->
+        <div class="characters-grid">
+            <div class="char-circle" onclick="sendAction('char_1')">🎭</div>
+            <div class="char-circle" onclick="sendAction('char_2')">👾</div>
+            <div class="char-circle" onclick="sendAction('char_3')">🦊</div>
+            <div class="char-circle" onclick="sendAction('char_4')">🐉</div>
+        </div>
+
+        <!-- Нижние кнопки (Квадраты) -->
+        <div class="bottom-grid">
+            <div class="char-square" onclick="sendAction('settings')">⚙️</div>
+            <div class="char-square" onclick="sendAction('memory')">🧠</div>
+            <div class="char-square" onclick="sendAction('new_char')">➕</div>
+            <div class="char-square" onclick="sendAction('profile')">👤</div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
